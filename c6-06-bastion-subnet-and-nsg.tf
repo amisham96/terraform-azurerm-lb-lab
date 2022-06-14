@@ -38,7 +38,7 @@ resource "azurerm_network_security_rule" "bastion_nsg_rule_inbound" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = each.value 
-  source_address_prefix       = "*"
+  source_address_prefix       = "20.228.147.61"
   destination_address_prefix  = "*"
   resource_group_name         = azurerm_resource_group.rg.name
   network_security_group_name = azurerm_network_security_group.bastion_subnet_nsg.name
